@@ -1,0 +1,2083 @@
+2024-06-19 09:08:04,503:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-06-19 09:08:04,503:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-06-19 09:08:04,503:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-06-19 09:08:04,503:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-06-19 09:08:06,531:INFO:PyCaret RegressionExperiment
+2024-06-19 09:08:06,531:INFO:Logging name: reg-default-name
+2024-06-19 09:08:06,531:INFO:ML Usecase: MLUsecase.REGRESSION
+2024-06-19 09:08:06,531:INFO:version 3.3.2
+2024-06-19 09:08:06,531:INFO:Initializing setup()
+2024-06-19 09:08:06,531:INFO:self.USI: e91d
+2024-06-19 09:08:06,532:INFO:self._variable_keys: {'target_param', 'fold_generator', 'y_train', 'n_jobs_param', 'logging_param', 'fold_shuffle_param', 'y', 'fold_groups_param', 'USI', 'memory', 'seed', 'pipeline', 'html_param', 'exp_name_log', 'log_plots_param', 'gpu_param', '_ml_usecase', '_available_plots', 'y_test', 'idx', 'X', 'X_train', 'transform_target_param', 'data', 'gpu_n_jobs_param', 'X_test', 'exp_id'}
+2024-06-19 09:08:06,532:INFO:Checking environment
+2024-06-19 09:08:06,532:INFO:python_version: 3.11.7
+2024-06-19 09:08:06,532:INFO:python_build: ('main', 'Dec 15 2023 18:05:47')
+2024-06-19 09:08:06,532:INFO:machine: AMD64
+2024-06-19 09:08:06,532:INFO:platform: Windows-10-10.0.22631-SP0
+2024-06-19 09:08:06,532:INFO:Memory: svmem(total=16963895296, available=3811815424, percent=77.5, used=13152079872, free=3811815424)
+2024-06-19 09:08:06,532:INFO:Physical Core: 4
+2024-06-19 09:08:06,532:INFO:Logical Core: 8
+2024-06-19 09:08:06,533:INFO:Checking libraries
+2024-06-19 09:08:06,533:INFO:System:
+2024-06-19 09:08:06,533:INFO:    python: 3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]
+2024-06-19 09:08:06,533:INFO:executable: C:\Users\hanyk\anaconda3\python.exe
+2024-06-19 09:08:06,533:INFO:   machine: Windows-10-10.0.22631-SP0
+2024-06-19 09:08:06,533:INFO:PyCaret required dependencies:
+2024-06-19 09:08:07,546:INFO:                 pip: 23.3.1
+2024-06-19 09:08:07,547:INFO:          setuptools: 68.2.2
+2024-06-19 09:08:07,547:INFO:             pycaret: 3.3.2
+2024-06-19 09:08:07,547:INFO:             IPython: 8.20.0
+2024-06-19 09:08:07,547:INFO:          ipywidgets: 7.6.5
+2024-06-19 09:08:07,547:INFO:                tqdm: 4.65.0
+2024-06-19 09:08:07,547:INFO:               numpy: 1.26.4
+2024-06-19 09:08:07,547:INFO:              pandas: 2.1.4
+2024-06-19 09:08:07,547:INFO:              jinja2: 3.1.3
+2024-06-19 09:08:07,547:INFO:               scipy: 1.11.4
+2024-06-19 09:08:07,547:INFO:              joblib: 1.2.0
+2024-06-19 09:08:07,547:INFO:             sklearn: 1.4.2
+2024-06-19 09:08:07,547:INFO:                pyod: 2.0.0
+2024-06-19 09:08:07,547:INFO:            imblearn: 0.12.3
+2024-06-19 09:08:07,547:INFO:   category_encoders: 2.6.3
+2024-06-19 09:08:07,547:INFO:            lightgbm: 4.4.0
+2024-06-19 09:08:07,547:INFO:               numba: 0.59.0
+2024-06-19 09:08:07,547:INFO:            requests: 2.31.0
+2024-06-19 09:08:07,547:INFO:          matplotlib: 3.7.5
+2024-06-19 09:08:07,547:INFO:          scikitplot: 0.3.7
+2024-06-19 09:08:07,547:INFO:         yellowbrick: 1.5
+2024-06-19 09:08:07,548:INFO:              plotly: 5.22.0
+2024-06-19 09:08:07,548:INFO:    plotly-resampler: Not installed
+2024-06-19 09:08:07,548:INFO:             kaleido: 0.2.1
+2024-06-19 09:08:07,548:INFO:           schemdraw: 0.15
+2024-06-19 09:08:07,548:INFO:         statsmodels: 0.14.0
+2024-06-19 09:08:07,548:INFO:              sktime: 0.26.0
+2024-06-19 09:08:07,548:INFO:               tbats: 1.1.3
+2024-06-19 09:08:07,548:INFO:            pmdarima: 2.0.4
+2024-06-19 09:08:07,548:INFO:              psutil: 5.9.0
+2024-06-19 09:08:07,548:INFO:          markupsafe: 2.1.3
+2024-06-19 09:08:07,548:INFO:             pickle5: Not installed
+2024-06-19 09:08:07,548:INFO:         cloudpickle: 2.2.1
+2024-06-19 09:08:07,548:INFO:         deprecation: 2.1.0
+2024-06-19 09:08:07,548:INFO:              xxhash: 3.4.1
+2024-06-19 09:08:07,548:INFO:           wurlitzer: Not installed
+2024-06-19 09:08:07,548:INFO:PyCaret optional dependencies:
+2024-06-19 09:08:07,561:INFO:                shap: Not installed
+2024-06-19 09:08:07,561:INFO:           interpret: Not installed
+2024-06-19 09:08:07,561:INFO:                umap: Not installed
+2024-06-19 09:08:07,561:INFO:     ydata_profiling: Not installed
+2024-06-19 09:08:07,561:INFO:  explainerdashboard: Not installed
+2024-06-19 09:08:07,561:INFO:             autoviz: Not installed
+2024-06-19 09:08:07,561:INFO:           fairlearn: Not installed
+2024-06-19 09:08:07,561:INFO:          deepchecks: Not installed
+2024-06-19 09:08:07,561:INFO:             xgboost: Not installed
+2024-06-19 09:08:07,561:INFO:            catboost: Not installed
+2024-06-19 09:08:07,561:INFO:              kmodes: Not installed
+2024-06-19 09:08:07,561:INFO:             mlxtend: Not installed
+2024-06-19 09:08:07,561:INFO:       statsforecast: Not installed
+2024-06-19 09:08:07,561:INFO:        tune_sklearn: Not installed
+2024-06-19 09:08:07,561:INFO:                 ray: Not installed
+2024-06-19 09:08:07,561:INFO:            hyperopt: Not installed
+2024-06-19 09:08:07,561:INFO:              optuna: Not installed
+2024-06-19 09:08:07,562:INFO:               skopt: Not installed
+2024-06-19 09:08:07,562:INFO:              mlflow: 2.14.0
+2024-06-19 09:08:07,562:INFO:              gradio: Not installed
+2024-06-19 09:08:07,562:INFO:             fastapi: Not installed
+2024-06-19 09:08:07,562:INFO:             uvicorn: Not installed
+2024-06-19 09:08:07,562:INFO:              m2cgen: Not installed
+2024-06-19 09:08:07,562:INFO:           evidently: Not installed
+2024-06-19 09:08:07,562:INFO:               fugue: Not installed
+2024-06-19 09:08:07,562:INFO:           streamlit: 1.30.0
+2024-06-19 09:08:07,562:INFO:             prophet: Not installed
+2024-06-19 09:08:07,562:INFO:None
+2024-06-19 09:08:07,562:INFO:Set up data.
+2024-06-19 09:08:07,768:INFO:Set up folding strategy.
+2024-06-19 09:08:07,769:INFO:Set up train/test split.
+2024-06-19 09:08:07,860:INFO:Set up index.
+2024-06-19 09:08:07,869:INFO:Assigning column types.
+2024-06-19 09:08:07,982:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2024-06-19 09:08:07,982:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2024-06-19 09:08:07,988:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2024-06-19 09:08:07,993:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,149:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,191:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,192:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,192:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,192:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,197:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,201:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,343:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,386:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,386:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,386:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,387:INFO:Engine successfully changes for model 'lasso' to 'sklearn'.
+2024-06-19 09:08:08,392:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,397:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,544:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,591:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,592:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,592:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,597:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,602:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,765:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,808:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,809:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,809:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:08,809:INFO:Engine successfully changes for model 'ridge' to 'sklearn'.
+2024-06-19 09:08:08,818:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:08,969:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,011:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,011:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,012:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,020:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,166:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,207:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,208:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,208:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,208:INFO:Engine successfully changes for model 'en' to 'sklearn'.
+2024-06-19 09:08:09,381:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,424:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,425:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,425:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,595:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,636:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,636:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,636:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,637:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2024-06-19 09:08:09,791:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:09,833:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,834:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:09,994:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2024-06-19 09:08:10,040:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,041:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,041:INFO:Engine successfully changes for model 'svm' to 'sklearn'.
+2024-06-19 09:08:10,246:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,246:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,441:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,442:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:10,442:INFO:Preparing preprocessing pipeline...
+2024-06-19 09:08:10,442:INFO:Set up simple imputation.
+2024-06-19 09:08:10,493:INFO:Set up encoding of categorical features.
+2024-06-19 09:08:10,509:INFO:Set up column name cleaning.
+2024-06-19 09:08:11,486:INFO:Finished creating preprocessing pipeline.
+2024-06-19 09:08:11,497:INFO:Pipeline: Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['building_number', 'temperature',
+                                             'rainfall', 'windspeed',
+                                             'humidity', 'building_type',
+                                             'total_area', 'cooling_area',
+                                             'holiday', 'sin_time', 'cos_time',
+                                             '불쾌지수', '불쾌정도', 'Tw', '체감온도',
+                                             'weekday', 'week_number', 'CDH'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 Tran...
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 TransformerWrapper(include=['solar_power_capacity',
+                                             'ess_capacity', 'pcs_capacity',
+                                             'month', 'day', 'hour'],
+                                    transformer=TargetEncoder(cols=['solar_power_capacity',
+                                                                    'ess_capacity',
+                                                                    'pcs_capacity',
+                                                                    'month',
+                                                                    'day',
+                                                                    'hour']))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames()))])
+2024-06-19 09:08:11,498:INFO:Creating final display dataframe.
+2024-06-19 09:08:12,935:INFO:Setup _display_container:                     Description  \
+0                    Session id   
+1                        Target   
+2                   Target type   
+3           Original data shape   
+4        Transformed data shape   
+5   Transformed train set shape   
+6    Transformed test set shape   
+7              Numeric features   
+8          Categorical features   
+9                    Preprocess   
+10              Imputation type   
+11           Numeric imputation   
+12       Categorical imputation   
+13     Maximum one-hot encoding   
+14              Encoding method   
+15               Fold Generator   
+16                  Fold Number   
+17                     CPU Jobs   
+18                      Use GPU   
+19               Log Experiment   
+20              Experiment Name   
+21                          USI   
+
+                                                Value  
+0                                                1234  
+1                                   power_consumption  
+2                                          Regression  
+3                                        (204000, 25)  
+4                                        (204000, 25)  
+5                                        (142800, 25)  
+6                                         (61200, 25)  
+7                                                  18  
+8                                                   6  
+9                                                True  
+10                                             simple  
+11                                               mean  
+12                                               mode  
+13                                                  1  
+14  TargetEncoder(cols=['solar_power_capacity', 'e...  
+15                                              KFold  
+16                                                  5  
+17                                                 -1  
+18                                              False  
+19                                       MlflowLogger  
+20                                   reg-default-name  
+21                                               e91d  
+2024-06-19 09:08:13,197:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:13,197:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:13,412:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:13,412:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-06-19 09:08:13,412:INFO:Logging experiment in loggers
+2024-06-19 09:08:13,796:INFO:SubProcess save_model() called ==================================
+2024-06-19 09:08:13,813:INFO:Initializing save_model()
+2024-06-19 09:08:13,813:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['building_number', 'temperature',
+                                             'rainfall', 'windspeed',
+                                             'humidity', 'building_type',
+                                             'total_area', 'cooling_area',
+                                             'holiday', 'sin_time', 'cos_time',
+                                             '불쾌지수', '불쾌정도', 'Tw', '체감온도',
+                                             'weekday', 'week_number', 'CDH'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 Tran...
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 TransformerWrapper(include=['solar_power_capacity',
+                                             'ess_capacity', 'pcs_capacity',
+                                             'month', 'day', 'hour'],
+                                    transformer=TargetEncoder(cols=['solar_power_capacity',
+                                                                    'ess_capacity',
+                                                                    'pcs_capacity',
+                                                                    'month',
+                                                                    'day',
+                                                                    'hour']))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames()))]), model_name=C:\Users\hanyk\AppData\Local\Temp\tmpfrh9_tu8\Transformation Pipeline, prep_pipe_=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['building_number', 'temperature',
+                                             'rainfall', 'windspeed',
+                                             'humidity', 'building_type',
+                                             'total_area', 'cooling_area',
+                                             'holiday', 'sin_time', 'cos_time',
+                                             '불쾌지수', '불쾌정도', 'Tw', '체감온도',
+                                             'weekday', 'week_number', 'CDH'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 Tran...
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 TransformerWrapper(include=['solar_power_capacity',
+                                             'ess_capacity', 'pcs_capacity',
+                                             'month', 'day', 'hour'],
+                                    transformer=TargetEncoder(cols=['solar_power_capacity',
+                                                                    'ess_capacity',
+                                                                    'pcs_capacity',
+                                                                    'month',
+                                                                    'day',
+                                                                    'hour']))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames()))]), verbose=False, use_case=MLUsecase.REGRESSION, kwargs={})
+2024-06-19 09:08:13,813:INFO:Adding model into prep_pipe
+2024-06-19 09:08:13,813:WARNING:Only Model saved as it was a pipeline.
+2024-06-19 09:08:13,822:INFO:C:\Users\hanyk\AppData\Local\Temp\tmpfrh9_tu8\Transformation Pipeline.pkl saved in current working directory
+2024-06-19 09:08:13,830:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['building_number', 'temperature',
+                                             'rainfall', 'windspeed',
+                                             'humidity', 'building_type',
+                                             'total_area', 'cooling_area',
+                                             'holiday', 'sin_time', 'cos_time',
+                                             '불쾌지수', '불쾌정도', 'Tw', '체감온도',
+                                             'weekday', 'week_number', 'CDH'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 Tran...
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 TransformerWrapper(include=['solar_power_capacity',
+                                             'ess_capacity', 'pcs_capacity',
+                                             'month', 'day', 'hour'],
+                                    transformer=TargetEncoder(cols=['solar_power_capacity',
+                                                                    'ess_capacity',
+                                                                    'pcs_capacity',
+                                                                    'month',
+                                                                    'day',
+                                                                    'hour']))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames()))])
+2024-06-19 09:08:13,831:INFO:save_model() successfully completed......................................
+2024-06-19 09:08:13,949:INFO:SubProcess save_model() end ==================================
+2024-06-19 09:08:14,029:INFO:setup() successfully completed in 6.88s...............
+2024-06-19 09:08:28,264:INFO:Initializing compare_models()
+2024-06-19 09:08:28,265:INFO:compare_models(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, include=None, exclude=None, fold=None, round=4, cross_validation=True, sort=R2, n_select=4, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'R2', 'n_select': 4, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.regression.oop.RegressionExperiment'>})
+2024-06-19 09:08:28,265:INFO:Checking exceptions
+2024-06-19 09:08:28,341:INFO:Preparing display monitor
+2024-06-19 09:08:28,377:INFO:Initializing Linear Regression
+2024-06-19 09:08:28,377:INFO:Total runtime is 0.0 minutes
+2024-06-19 09:08:28,382:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:08:28,383:INFO:Initializing create_model()
+2024-06-19 09:08:28,383:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=lr, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:08:28,384:INFO:Checking exceptions
+2024-06-19 09:08:28,384:INFO:Importing libraries
+2024-06-19 09:08:28,384:INFO:Copying training dataset
+2024-06-19 09:08:28,546:INFO:Defining folds
+2024-06-19 09:08:28,546:INFO:Declaring metric variables
+2024-06-19 09:08:28,550:INFO:Importing untrained model
+2024-06-19 09:08:28,554:INFO:Linear Regression Imported successfully
+2024-06-19 09:08:28,564:INFO:Starting cross validation
+2024-06-19 09:08:28,572:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:08:38,708:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:38,741:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:38,763:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:38,793:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:38,835:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:39,150:INFO:Calculating mean and std
+2024-06-19 09:08:39,154:INFO:Creating metrics dataframe
+2024-06-19 09:08:39,160:INFO:Uploading results into container
+2024-06-19 09:08:39,163:INFO:Uploading model into container now
+2024-06-19 09:08:39,165:INFO:_master_model_container: 1
+2024-06-19 09:08:39,167:INFO:_display_container: 2
+2024-06-19 09:08:39,169:INFO:LinearRegression(n_jobs=-1)
+2024-06-19 09:08:39,169:INFO:create_model() successfully completed......................................
+2024-06-19 09:08:39,328:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:08:39,328:INFO:Creating metrics dataframe
+2024-06-19 09:08:39,339:INFO:Initializing Lasso Regression
+2024-06-19 09:08:39,339:INFO:Total runtime is 0.18269879817962648 minutes
+2024-06-19 09:08:39,344:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:08:39,344:INFO:Initializing create_model()
+2024-06-19 09:08:39,344:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=lasso, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:08:39,345:INFO:Checking exceptions
+2024-06-19 09:08:39,345:INFO:Importing libraries
+2024-06-19 09:08:39,345:INFO:Copying training dataset
+2024-06-19 09:08:39,529:INFO:Defining folds
+2024-06-19 09:08:39,529:INFO:Declaring metric variables
+2024-06-19 09:08:39,533:INFO:Importing untrained model
+2024-06-19 09:08:39,538:INFO:Lasso Regression Imported successfully
+2024-06-19 09:08:39,550:INFO:Starting cross validation
+2024-06-19 09:08:39,553:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:08:53,056:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.238e+11, tolerance: 6.890e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:08:53,165:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.229e+11, tolerance: 6.885e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:08:53,338:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:08:53,420:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:01,831:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.232e+11, tolerance: 6.793e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:01,862:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.240e+11, tolerance: 6.944e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:01,943:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.229e+11, tolerance: 6.820e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:02,010:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:02,028:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:02,098:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:02,206:INFO:Calculating mean and std
+2024-06-19 09:09:02,210:INFO:Creating metrics dataframe
+2024-06-19 09:09:02,216:INFO:Uploading results into container
+2024-06-19 09:09:02,218:INFO:Uploading model into container now
+2024-06-19 09:09:02,219:INFO:_master_model_container: 2
+2024-06-19 09:09:02,220:INFO:_display_container: 2
+2024-06-19 09:09:02,221:INFO:Lasso(random_state=1234)
+2024-06-19 09:09:02,221:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:02,373:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:02,373:INFO:Creating metrics dataframe
+2024-06-19 09:09:02,386:INFO:Initializing Ridge Regression
+2024-06-19 09:09:02,386:INFO:Total runtime is 0.5668128808339437 minutes
+2024-06-19 09:09:02,391:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:02,391:INFO:Initializing create_model()
+2024-06-19 09:09:02,392:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=ridge, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:02,393:INFO:Checking exceptions
+2024-06-19 09:09:02,393:INFO:Importing libraries
+2024-06-19 09:09:02,393:INFO:Copying training dataset
+2024-06-19 09:09:02,550:INFO:Defining folds
+2024-06-19 09:09:02,550:INFO:Declaring metric variables
+2024-06-19 09:09:02,554:INFO:Importing untrained model
+2024-06-19 09:09:02,559:INFO:Ridge Regression Imported successfully
+2024-06-19 09:09:02,568:INFO:Starting cross validation
+2024-06-19 09:09:02,570:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:04,110:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.35883e-17): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-06-19 09:09:04,119:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.38774e-17): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-06-19 09:09:04,237:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.39894e-17): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-06-19 09:09:04,237:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.36773e-17): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-06-19 09:09:04,320:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.37962e-17): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-06-19 09:09:04,329:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:04,335:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:04,406:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:04,414:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:04,463:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:04,569:INFO:Calculating mean and std
+2024-06-19 09:09:04,570:INFO:Creating metrics dataframe
+2024-06-19 09:09:04,573:INFO:Uploading results into container
+2024-06-19 09:09:04,574:INFO:Uploading model into container now
+2024-06-19 09:09:04,575:INFO:_master_model_container: 3
+2024-06-19 09:09:04,575:INFO:_display_container: 2
+2024-06-19 09:09:04,576:INFO:Ridge(random_state=1234)
+2024-06-19 09:09:04,576:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:04,700:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:04,700:INFO:Creating metrics dataframe
+2024-06-19 09:09:04,714:INFO:Initializing Elastic Net
+2024-06-19 09:09:04,715:INFO:Total runtime is 0.6056313832600911 minutes
+2024-06-19 09:09:04,719:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:04,720:INFO:Initializing create_model()
+2024-06-19 09:09:04,720:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=en, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:04,721:INFO:Checking exceptions
+2024-06-19 09:09:04,721:INFO:Importing libraries
+2024-06-19 09:09:04,721:INFO:Copying training dataset
+2024-06-19 09:09:04,908:INFO:Defining folds
+2024-06-19 09:09:04,909:INFO:Declaring metric variables
+2024-06-19 09:09:04,914:INFO:Importing untrained model
+2024-06-19 09:09:04,918:INFO:Elastic Net Imported successfully
+2024-06-19 09:09:04,929:INFO:Starting cross validation
+2024-06-19 09:09:04,932:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:35,915:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.250e+11, tolerance: 6.944e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:35,942:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.242e+11, tolerance: 6.793e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:35,989:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.238e+11, tolerance: 6.885e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:36,096:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.239e+11, tolerance: 6.820e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:36,178:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:36,197:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:36,207:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:36,226:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_coordinate_descent.py:678: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.248e+11, tolerance: 6.890e+07
+  model = cd_fast.enet_coordinate_descent(
+
+2024-06-19 09:09:36,256:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:36,351:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:36,458:INFO:Calculating mean and std
+2024-06-19 09:09:36,462:INFO:Creating metrics dataframe
+2024-06-19 09:09:36,469:INFO:Uploading results into container
+2024-06-19 09:09:36,471:INFO:Uploading model into container now
+2024-06-19 09:09:36,472:INFO:_master_model_container: 4
+2024-06-19 09:09:36,472:INFO:_display_container: 2
+2024-06-19 09:09:36,473:INFO:ElasticNet(random_state=1234)
+2024-06-19 09:09:36,474:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:36,595:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:36,596:INFO:Creating metrics dataframe
+2024-06-19 09:09:36,605:INFO:Initializing Least Angle Regression
+2024-06-19 09:09:36,605:INFO:Total runtime is 1.137130590279897 minutes
+2024-06-19 09:09:36,610:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:36,611:INFO:Initializing create_model()
+2024-06-19 09:09:36,611:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=lar, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:36,611:INFO:Checking exceptions
+2024-06-19 09:09:36,611:INFO:Importing libraries
+2024-06-19 09:09:36,612:INFO:Copying training dataset
+2024-06-19 09:09:36,766:INFO:Defining folds
+2024-06-19 09:09:36,766:INFO:Declaring metric variables
+2024-06-19 09:09:36,770:INFO:Importing untrained model
+2024-06-19 09:09:36,776:INFO:Least Angle Regression Imported successfully
+2024-06-19 09:09:36,785:INFO:Starting cross validation
+2024-06-19 09:09:36,788:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:38,557:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:38,603:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:38,621:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:38,680:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:38,691:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:39,000:INFO:Calculating mean and std
+2024-06-19 09:09:39,002:INFO:Creating metrics dataframe
+2024-06-19 09:09:39,004:INFO:Uploading results into container
+2024-06-19 09:09:39,006:INFO:Uploading model into container now
+2024-06-19 09:09:39,006:INFO:_master_model_container: 5
+2024-06-19 09:09:39,007:INFO:_display_container: 2
+2024-06-19 09:09:39,008:INFO:Lars(random_state=1234)
+2024-06-19 09:09:39,008:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:39,134:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:39,134:INFO:Creating metrics dataframe
+2024-06-19 09:09:39,144:INFO:Initializing Lasso Least Angle Regression
+2024-06-19 09:09:39,145:INFO:Total runtime is 1.1794622262318928 minutes
+2024-06-19 09:09:39,150:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:39,151:INFO:Initializing create_model()
+2024-06-19 09:09:39,151:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=llar, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:39,151:INFO:Checking exceptions
+2024-06-19 09:09:39,152:INFO:Importing libraries
+2024-06-19 09:09:39,152:INFO:Copying training dataset
+2024-06-19 09:09:39,395:INFO:Defining folds
+2024-06-19 09:09:39,395:INFO:Declaring metric variables
+2024-06-19 09:09:39,399:INFO:Importing untrained model
+2024-06-19 09:09:39,405:INFO:Lasso Least Angle Regression Imported successfully
+2024-06-19 09:09:39,414:INFO:Starting cross validation
+2024-06-19 09:09:39,416:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:41,088:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:41,248:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:41,250:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:41,277:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:41,331:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:41,438:INFO:Calculating mean and std
+2024-06-19 09:09:41,443:INFO:Creating metrics dataframe
+2024-06-19 09:09:41,449:INFO:Uploading results into container
+2024-06-19 09:09:41,451:INFO:Uploading model into container now
+2024-06-19 09:09:41,452:INFO:_master_model_container: 6
+2024-06-19 09:09:41,452:INFO:_display_container: 2
+2024-06-19 09:09:41,453:INFO:LassoLars(random_state=1234)
+2024-06-19 09:09:41,454:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:41,606:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:41,606:INFO:Creating metrics dataframe
+2024-06-19 09:09:41,618:INFO:Initializing Orthogonal Matching Pursuit
+2024-06-19 09:09:41,618:INFO:Total runtime is 1.220683685938517 minutes
+2024-06-19 09:09:41,623:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:41,623:INFO:Initializing create_model()
+2024-06-19 09:09:41,624:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=omp, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:41,624:INFO:Checking exceptions
+2024-06-19 09:09:41,624:INFO:Importing libraries
+2024-06-19 09:09:41,624:INFO:Copying training dataset
+2024-06-19 09:09:41,777:INFO:Defining folds
+2024-06-19 09:09:41,777:INFO:Declaring metric variables
+2024-06-19 09:09:41,781:INFO:Importing untrained model
+2024-06-19 09:09:41,786:INFO:Orthogonal Matching Pursuit Imported successfully
+2024-06-19 09:09:41,795:INFO:Starting cross validation
+2024-06-19 09:09:41,797:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:43,645:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:43,653:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:43,673:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:43,745:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:43,798:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:43,904:INFO:Calculating mean and std
+2024-06-19 09:09:43,906:INFO:Creating metrics dataframe
+2024-06-19 09:09:43,909:INFO:Uploading results into container
+2024-06-19 09:09:43,910:INFO:Uploading model into container now
+2024-06-19 09:09:43,910:INFO:_master_model_container: 7
+2024-06-19 09:09:43,910:INFO:_display_container: 2
+2024-06-19 09:09:43,911:INFO:OrthogonalMatchingPursuit()
+2024-06-19 09:09:43,911:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:44,022:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:44,023:INFO:Creating metrics dataframe
+2024-06-19 09:09:44,033:INFO:Initializing Bayesian Ridge
+2024-06-19 09:09:44,033:INFO:Total runtime is 1.2609401623407999 minutes
+2024-06-19 09:09:44,039:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:44,039:INFO:Initializing create_model()
+2024-06-19 09:09:44,039:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=br, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:44,039:INFO:Checking exceptions
+2024-06-19 09:09:44,039:INFO:Importing libraries
+2024-06-19 09:09:44,039:INFO:Copying training dataset
+2024-06-19 09:09:44,182:INFO:Defining folds
+2024-06-19 09:09:44,182:INFO:Declaring metric variables
+2024-06-19 09:09:44,186:INFO:Importing untrained model
+2024-06-19 09:09:44,191:INFO:Bayesian Ridge Imported successfully
+2024-06-19 09:09:44,201:INFO:Starting cross validation
+2024-06-19 09:09:44,203:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:46,359:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:46,399:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:46,455:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:46,492:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:46,545:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:46,653:INFO:Calculating mean and std
+2024-06-19 09:09:46,657:INFO:Creating metrics dataframe
+2024-06-19 09:09:46,663:INFO:Uploading results into container
+2024-06-19 09:09:46,664:INFO:Uploading model into container now
+2024-06-19 09:09:46,665:INFO:_master_model_container: 8
+2024-06-19 09:09:46,666:INFO:_display_container: 2
+2024-06-19 09:09:46,666:INFO:BayesianRidge()
+2024-06-19 09:09:46,667:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:46,801:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:46,801:INFO:Creating metrics dataframe
+2024-06-19 09:09:46,813:INFO:Initializing Passive Aggressive Regressor
+2024-06-19 09:09:46,813:INFO:Total runtime is 1.3072768410046893 minutes
+2024-06-19 09:09:46,817:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:46,817:INFO:Initializing create_model()
+2024-06-19 09:09:46,818:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=par, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:46,818:INFO:Checking exceptions
+2024-06-19 09:09:46,819:INFO:Importing libraries
+2024-06-19 09:09:46,819:INFO:Copying training dataset
+2024-06-19 09:09:47,058:INFO:Defining folds
+2024-06-19 09:09:47,058:INFO:Declaring metric variables
+2024-06-19 09:09:47,063:INFO:Importing untrained model
+2024-06-19 09:09:47,068:INFO:Passive Aggressive Regressor Imported successfully
+2024-06-19 09:09:47,079:INFO:Starting cross validation
+2024-06-19 09:09:47,081:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:49,157:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:49,193:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:49,221:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:49,311:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:49,325:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:49,633:INFO:Calculating mean and std
+2024-06-19 09:09:49,635:INFO:Creating metrics dataframe
+2024-06-19 09:09:49,637:INFO:Uploading results into container
+2024-06-19 09:09:49,638:INFO:Uploading model into container now
+2024-06-19 09:09:49,638:INFO:_master_model_container: 9
+2024-06-19 09:09:49,638:INFO:_display_container: 2
+2024-06-19 09:09:49,639:INFO:PassiveAggressiveRegressor(random_state=1234)
+2024-06-19 09:09:49,639:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:49,752:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:49,752:INFO:Creating metrics dataframe
+2024-06-19 09:09:49,763:INFO:Initializing Huber Regressor
+2024-06-19 09:09:49,763:INFO:Total runtime is 1.3564348220825193 minutes
+2024-06-19 09:09:49,768:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:49,768:INFO:Initializing create_model()
+2024-06-19 09:09:49,768:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=huber, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:49,768:INFO:Checking exceptions
+2024-06-19 09:09:49,768:INFO:Importing libraries
+2024-06-19 09:09:49,768:INFO:Copying training dataset
+2024-06-19 09:09:49,978:INFO:Defining folds
+2024-06-19 09:09:49,978:INFO:Declaring metric variables
+2024-06-19 09:09:49,982:INFO:Importing untrained model
+2024-06-19 09:09:49,988:INFO:Huber Regressor Imported successfully
+2024-06-19 09:09:49,998:INFO:Starting cross validation
+2024-06-19 09:09:49,999:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:09:55,302:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:55,934:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:56,294:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:56,486:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\linear_model\_huber.py:342: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+
+2024-06-19 09:09:56,612:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:56,652:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:09:56,757:INFO:Calculating mean and std
+2024-06-19 09:09:56,759:INFO:Creating metrics dataframe
+2024-06-19 09:09:56,762:INFO:Uploading results into container
+2024-06-19 09:09:56,762:INFO:Uploading model into container now
+2024-06-19 09:09:56,763:INFO:_master_model_container: 10
+2024-06-19 09:09:56,763:INFO:_display_container: 2
+2024-06-19 09:09:56,763:INFO:HuberRegressor()
+2024-06-19 09:09:56,763:INFO:create_model() successfully completed......................................
+2024-06-19 09:09:56,882:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:09:56,882:INFO:Creating metrics dataframe
+2024-06-19 09:09:56,893:INFO:Initializing K Neighbors Regressor
+2024-06-19 09:09:56,893:INFO:Total runtime is 1.4752675215403237 minutes
+2024-06-19 09:09:56,898:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:09:56,898:INFO:Initializing create_model()
+2024-06-19 09:09:56,898:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=knn, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:09:56,898:INFO:Checking exceptions
+2024-06-19 09:09:56,898:INFO:Importing libraries
+2024-06-19 09:09:56,899:INFO:Copying training dataset
+2024-06-19 09:09:57,050:INFO:Defining folds
+2024-06-19 09:09:57,050:INFO:Declaring metric variables
+2024-06-19 09:09:57,055:INFO:Importing untrained model
+2024-06-19 09:09:57,060:INFO:K Neighbors Regressor Imported successfully
+2024-06-19 09:09:57,069:INFO:Starting cross validation
+2024-06-19 09:09:57,070:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:10:29,109:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:29,124:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:29,460:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:29,554:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:29,573:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:29,681:INFO:Calculating mean and std
+2024-06-19 09:10:29,684:INFO:Creating metrics dataframe
+2024-06-19 09:10:29,688:INFO:Uploading results into container
+2024-06-19 09:10:29,689:INFO:Uploading model into container now
+2024-06-19 09:10:29,690:INFO:_master_model_container: 11
+2024-06-19 09:10:29,690:INFO:_display_container: 2
+2024-06-19 09:10:29,691:INFO:KNeighborsRegressor(n_jobs=-1)
+2024-06-19 09:10:29,691:INFO:create_model() successfully completed......................................
+2024-06-19 09:10:29,818:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:10:29,818:INFO:Creating metrics dataframe
+2024-06-19 09:10:29,832:INFO:Initializing Decision Tree Regressor
+2024-06-19 09:10:29,832:INFO:Total runtime is 2.024260592460632 minutes
+2024-06-19 09:10:29,835:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:10:29,835:INFO:Initializing create_model()
+2024-06-19 09:10:29,837:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=dt, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:10:29,837:INFO:Checking exceptions
+2024-06-19 09:10:29,837:INFO:Importing libraries
+2024-06-19 09:10:29,837:INFO:Copying training dataset
+2024-06-19 09:10:30,009:INFO:Defining folds
+2024-06-19 09:10:30,010:INFO:Declaring metric variables
+2024-06-19 09:10:30,016:INFO:Importing untrained model
+2024-06-19 09:10:30,021:INFO:Decision Tree Regressor Imported successfully
+2024-06-19 09:10:30,032:INFO:Starting cross validation
+2024-06-19 09:10:30,034:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:10:35,683:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:35,816:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:35,819:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:35,901:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:35,910:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:10:36,016:INFO:Calculating mean and std
+2024-06-19 09:10:36,019:INFO:Creating metrics dataframe
+2024-06-19 09:10:36,023:INFO:Uploading results into container
+2024-06-19 09:10:36,025:INFO:Uploading model into container now
+2024-06-19 09:10:36,025:INFO:_master_model_container: 12
+2024-06-19 09:10:36,025:INFO:_display_container: 2
+2024-06-19 09:10:36,026:INFO:DecisionTreeRegressor(random_state=1234)
+2024-06-19 09:10:36,026:INFO:create_model() successfully completed......................................
+2024-06-19 09:10:36,144:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:10:36,144:INFO:Creating metrics dataframe
+2024-06-19 09:10:36,155:INFO:Initializing Random Forest Regressor
+2024-06-19 09:10:36,155:INFO:Total runtime is 2.129635957876841 minutes
+2024-06-19 09:10:36,158:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:10:36,159:INFO:Initializing create_model()
+2024-06-19 09:10:36,159:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=rf, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:10:36,159:INFO:Checking exceptions
+2024-06-19 09:10:36,159:INFO:Importing libraries
+2024-06-19 09:10:36,159:INFO:Copying training dataset
+2024-06-19 09:10:36,307:INFO:Defining folds
+2024-06-19 09:10:36,307:INFO:Declaring metric variables
+2024-06-19 09:10:36,311:INFO:Importing untrained model
+2024-06-19 09:10:36,316:INFO:Random Forest Regressor Imported successfully
+2024-06-19 09:10:36,325:INFO:Starting cross validation
+2024-06-19 09:10:36,327:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:14:37,208:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:14:38,084:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:14:38,650:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:14:39,162:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:14:39,485:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:14:39,798:INFO:Calculating mean and std
+2024-06-19 09:14:39,800:INFO:Creating metrics dataframe
+2024-06-19 09:14:39,804:INFO:Uploading results into container
+2024-06-19 09:14:39,805:INFO:Uploading model into container now
+2024-06-19 09:14:39,806:INFO:_master_model_container: 13
+2024-06-19 09:14:39,807:INFO:_display_container: 2
+2024-06-19 09:14:39,808:INFO:RandomForestRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:14:39,808:INFO:create_model() successfully completed......................................
+2024-06-19 09:14:39,971:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:14:39,971:INFO:Creating metrics dataframe
+2024-06-19 09:14:39,985:INFO:Initializing Extra Trees Regressor
+2024-06-19 09:14:39,985:INFO:Total runtime is 6.193463853995006 minutes
+2024-06-19 09:14:39,990:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:14:39,991:INFO:Initializing create_model()
+2024-06-19 09:14:39,991:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=et, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:14:39,991:INFO:Checking exceptions
+2024-06-19 09:14:39,992:INFO:Importing libraries
+2024-06-19 09:14:39,992:INFO:Copying training dataset
+2024-06-19 09:14:40,200:INFO:Defining folds
+2024-06-19 09:14:40,200:INFO:Declaring metric variables
+2024-06-19 09:14:40,208:INFO:Importing untrained model
+2024-06-19 09:14:40,214:INFO:Extra Trees Regressor Imported successfully
+2024-06-19 09:14:40,226:INFO:Starting cross validation
+2024-06-19 09:14:40,228:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:17:28,795:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:17:30,720:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:17:31,027:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:17:31,562:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:17:31,630:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:17:31,873:INFO:Calculating mean and std
+2024-06-19 09:17:31,876:INFO:Creating metrics dataframe
+2024-06-19 09:17:31,882:INFO:Uploading results into container
+2024-06-19 09:17:31,884:INFO:Uploading model into container now
+2024-06-19 09:17:31,885:INFO:_master_model_container: 14
+2024-06-19 09:17:31,886:INFO:_display_container: 2
+2024-06-19 09:17:31,887:INFO:ExtraTreesRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:17:31,887:INFO:create_model() successfully completed......................................
+2024-06-19 09:17:32,107:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:17:32,107:INFO:Creating metrics dataframe
+2024-06-19 09:17:32,145:INFO:Initializing AdaBoost Regressor
+2024-06-19 09:17:32,146:INFO:Total runtime is 9.062825854619344 minutes
+2024-06-19 09:17:32,155:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:17:32,156:INFO:Initializing create_model()
+2024-06-19 09:17:32,156:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=ada, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:17:32,156:INFO:Checking exceptions
+2024-06-19 09:17:32,157:INFO:Importing libraries
+2024-06-19 09:17:32,157:INFO:Copying training dataset
+2024-06-19 09:17:32,583:INFO:Defining folds
+2024-06-19 09:17:32,583:INFO:Declaring metric variables
+2024-06-19 09:17:32,594:INFO:Importing untrained model
+2024-06-19 09:17:32,603:INFO:AdaBoost Regressor Imported successfully
+2024-06-19 09:17:32,623:INFO:Starting cross validation
+2024-06-19 09:17:32,628:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:18:09,678:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:18:09,861:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:18:09,900:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:18:09,919:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:18:10,028:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:18:10,137:INFO:Calculating mean and std
+2024-06-19 09:18:10,140:INFO:Creating metrics dataframe
+2024-06-19 09:18:10,144:INFO:Uploading results into container
+2024-06-19 09:18:10,146:INFO:Uploading model into container now
+2024-06-19 09:18:10,148:INFO:_master_model_container: 15
+2024-06-19 09:18:10,148:INFO:_display_container: 2
+2024-06-19 09:18:10,148:INFO:AdaBoostRegressor(random_state=1234)
+2024-06-19 09:18:10,149:INFO:create_model() successfully completed......................................
+2024-06-19 09:18:10,290:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:18:10,290:INFO:Creating metrics dataframe
+2024-06-19 09:18:10,302:INFO:Initializing Gradient Boosting Regressor
+2024-06-19 09:18:10,303:INFO:Total runtime is 9.698758991559346 minutes
+2024-06-19 09:18:10,307:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:18:10,308:INFO:Initializing create_model()
+2024-06-19 09:18:10,308:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=gbr, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:18:10,308:INFO:Checking exceptions
+2024-06-19 09:18:10,308:INFO:Importing libraries
+2024-06-19 09:18:10,308:INFO:Copying training dataset
+2024-06-19 09:18:10,483:INFO:Defining folds
+2024-06-19 09:18:10,484:INFO:Declaring metric variables
+2024-06-19 09:18:10,489:INFO:Importing untrained model
+2024-06-19 09:18:10,494:INFO:Gradient Boosting Regressor Imported successfully
+2024-06-19 09:18:10,503:INFO:Starting cross validation
+2024-06-19 09:18:10,505:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:19:09,117:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:09,462:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:09,640:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:09,845:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:09,857:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:09,968:INFO:Calculating mean and std
+2024-06-19 09:19:09,971:INFO:Creating metrics dataframe
+2024-06-19 09:19:09,976:INFO:Uploading results into container
+2024-06-19 09:19:09,977:INFO:Uploading model into container now
+2024-06-19 09:19:09,978:INFO:_master_model_container: 16
+2024-06-19 09:19:09,978:INFO:_display_container: 2
+2024-06-19 09:19:09,979:INFO:GradientBoostingRegressor(random_state=1234)
+2024-06-19 09:19:09,979:INFO:create_model() successfully completed......................................
+2024-06-19 09:19:10,115:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:19:10,115:INFO:Creating metrics dataframe
+2024-06-19 09:19:10,131:INFO:Initializing Light Gradient Boosting Machine
+2024-06-19 09:19:10,132:INFO:Total runtime is 10.695912679036459 minutes
+2024-06-19 09:19:10,138:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:19:10,138:INFO:Initializing create_model()
+2024-06-19 09:19:10,138:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=lightgbm, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:19:10,138:INFO:Checking exceptions
+2024-06-19 09:19:10,139:INFO:Importing libraries
+2024-06-19 09:19:10,139:INFO:Copying training dataset
+2024-06-19 09:19:10,294:INFO:Defining folds
+2024-06-19 09:19:10,294:INFO:Declaring metric variables
+2024-06-19 09:19:10,298:INFO:Importing untrained model
+2024-06-19 09:19:10,305:INFO:Light Gradient Boosting Machine Imported successfully
+2024-06-19 09:19:10,319:INFO:Starting cross validation
+2024-06-19 09:19:10,321:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:19:17,076:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:17,101:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:17,202:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:17,351:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:17,698:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:17,808:INFO:Calculating mean and std
+2024-06-19 09:19:17,810:INFO:Creating metrics dataframe
+2024-06-19 09:19:17,813:INFO:Uploading results into container
+2024-06-19 09:19:17,813:INFO:Uploading model into container now
+2024-06-19 09:19:17,814:INFO:_master_model_container: 17
+2024-06-19 09:19:17,814:INFO:_display_container: 2
+2024-06-19 09:19:17,815:INFO:LGBMRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:19:17,815:INFO:create_model() successfully completed......................................
+2024-06-19 09:19:17,952:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:19:17,953:INFO:Creating metrics dataframe
+2024-06-19 09:19:17,967:INFO:Initializing Dummy Regressor
+2024-06-19 09:19:17,967:INFO:Total runtime is 10.826503094037374 minutes
+2024-06-19 09:19:17,972:INFO:SubProcess create_model() called ==================================
+2024-06-19 09:19:17,972:INFO:Initializing create_model()
+2024-06-19 09:19:17,972:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=dummy, fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001D52DA09F50>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:19:17,972:INFO:Checking exceptions
+2024-06-19 09:19:17,973:INFO:Importing libraries
+2024-06-19 09:19:17,973:INFO:Copying training dataset
+2024-06-19 09:19:18,147:INFO:Defining folds
+2024-06-19 09:19:18,147:INFO:Declaring metric variables
+2024-06-19 09:19:18,153:INFO:Importing untrained model
+2024-06-19 09:19:18,158:INFO:Dummy Regressor Imported successfully
+2024-06-19 09:19:18,169:INFO:Starting cross validation
+2024-06-19 09:19:18,172:INFO:Cross validating with KFold(n_splits=5, random_state=None, shuffle=False), n_jobs=-1
+2024-06-19 09:19:20,067:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:20,131:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:20,151:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:20,271:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:20,288:WARNING:C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(smape, response_method='predict')' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\hanyk\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: smape() got an unexpected keyword argument 'sample_weight'
+
+  warnings.warn(
+
+2024-06-19 09:19:20,598:INFO:Calculating mean and std
+2024-06-19 09:19:20,600:INFO:Creating metrics dataframe
+2024-06-19 09:19:20,603:INFO:Uploading results into container
+2024-06-19 09:19:20,604:INFO:Uploading model into container now
+2024-06-19 09:19:20,606:INFO:_master_model_container: 18
+2024-06-19 09:19:20,606:INFO:_display_container: 2
+2024-06-19 09:19:20,607:INFO:DummyRegressor()
+2024-06-19 09:19:20,607:INFO:create_model() successfully completed......................................
+2024-06-19 09:19:20,720:INFO:SubProcess create_model() end ==================================
+2024-06-19 09:19:20,720:INFO:Creating metrics dataframe
+2024-06-19 09:19:20,746:INFO:Initializing create_model()
+2024-06-19 09:19:20,746:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=1234), fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:19:20,746:INFO:Checking exceptions
+2024-06-19 09:19:20,747:INFO:Importing libraries
+2024-06-19 09:19:20,748:INFO:Copying training dataset
+2024-06-19 09:19:20,917:INFO:Defining folds
+2024-06-19 09:19:20,917:INFO:Declaring metric variables
+2024-06-19 09:19:20,917:INFO:Importing untrained model
+2024-06-19 09:19:20,917:INFO:Declaring custom model
+2024-06-19 09:19:20,919:INFO:Extra Trees Regressor Imported successfully
+2024-06-19 09:19:20,922:INFO:Cross validation set to False
+2024-06-19 09:19:20,922:INFO:Fitting Model
+2024-06-19 09:20:05,242:INFO:ExtraTreesRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:20:05,243:INFO:create_model() successfully completed......................................
+2024-06-19 09:20:05,461:INFO:Creating Dashboard logs
+2024-06-19 09:20:05,468:INFO:Model: Extra Trees Regressor
+2024-06-19 09:20:05,559:INFO:Logged params: {'bootstrap': False, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 1234, 'verbose': 0, 'warm_start': False}
+2024-06-19 09:20:05,878:INFO:Initializing predict_model()
+2024-06-19 09:20:05,878:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=1234), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001D532C513A0>)
+2024-06-19 09:20:05,878:INFO:Checking exceptions
+2024-06-19 09:20:05,878:INFO:Preloading libraries
+2024-06-19 09:20:15,956:INFO:Initializing create_model()
+2024-06-19 09:20:15,956:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=RandomForestRegressor(n_jobs=-1, random_state=1234), fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:20:15,956:INFO:Checking exceptions
+2024-06-19 09:20:15,957:INFO:Importing libraries
+2024-06-19 09:20:15,958:INFO:Copying training dataset
+2024-06-19 09:20:16,095:INFO:Defining folds
+2024-06-19 09:20:16,095:INFO:Declaring metric variables
+2024-06-19 09:20:16,095:INFO:Importing untrained model
+2024-06-19 09:20:16,095:INFO:Declaring custom model
+2024-06-19 09:20:16,096:INFO:Random Forest Regressor Imported successfully
+2024-06-19 09:20:16,097:INFO:Cross validation set to False
+2024-06-19 09:20:16,097:INFO:Fitting Model
+2024-06-19 09:21:23,062:INFO:RandomForestRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:21:23,062:INFO:create_model() successfully completed......................................
+2024-06-19 09:21:23,182:INFO:Creating Dashboard logs
+2024-06-19 09:21:23,187:INFO:Model: Random Forest Regressor
+2024-06-19 09:21:23,246:INFO:Logged params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 1234, 'verbose': 0, 'warm_start': False}
+2024-06-19 09:21:23,423:INFO:Initializing predict_model()
+2024-06-19 09:21:23,423:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=RandomForestRegressor(n_jobs=-1, random_state=1234), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001D532D8E480>)
+2024-06-19 09:21:23,423:INFO:Checking exceptions
+2024-06-19 09:21:23,423:INFO:Preloading libraries
+2024-06-19 09:21:27,459:INFO:Initializing create_model()
+2024-06-19 09:21:27,459:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=DecisionTreeRegressor(random_state=1234), fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:21:27,460:INFO:Checking exceptions
+2024-06-19 09:21:27,463:INFO:Importing libraries
+2024-06-19 09:21:27,463:INFO:Copying training dataset
+2024-06-19 09:21:27,601:INFO:Defining folds
+2024-06-19 09:21:27,601:INFO:Declaring metric variables
+2024-06-19 09:21:27,601:INFO:Importing untrained model
+2024-06-19 09:21:27,601:INFO:Declaring custom model
+2024-06-19 09:21:27,602:INFO:Decision Tree Regressor Imported successfully
+2024-06-19 09:21:27,603:INFO:Cross validation set to False
+2024-06-19 09:21:27,603:INFO:Fitting Model
+2024-06-19 09:21:32,141:INFO:DecisionTreeRegressor(random_state=1234)
+2024-06-19 09:21:32,141:INFO:create_model() successfully completed......................................
+2024-06-19 09:21:32,260:INFO:Creating Dashboard logs
+2024-06-19 09:21:32,266:INFO:Model: Decision Tree Regressor
+2024-06-19 09:21:32,335:INFO:Logged params: {'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'random_state': 1234, 'splitter': 'best'}
+2024-06-19 09:21:32,494:INFO:Initializing predict_model()
+2024-06-19 09:21:32,494:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=DecisionTreeRegressor(random_state=1234), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001D52A9E4180>)
+2024-06-19 09:21:32,494:INFO:Checking exceptions
+2024-06-19 09:21:32,494:INFO:Preloading libraries
+2024-06-19 09:21:33,536:INFO:Initializing create_model()
+2024-06-19 09:21:33,536:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=LGBMRegressor(n_jobs=-1, random_state=1234), fold=KFold(n_splits=5, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-06-19 09:21:33,536:INFO:Checking exceptions
+2024-06-19 09:21:33,538:INFO:Importing libraries
+2024-06-19 09:21:33,538:INFO:Copying training dataset
+2024-06-19 09:21:33,667:INFO:Defining folds
+2024-06-19 09:21:33,667:INFO:Declaring metric variables
+2024-06-19 09:21:33,668:INFO:Importing untrained model
+2024-06-19 09:21:33,668:INFO:Declaring custom model
+2024-06-19 09:21:33,668:INFO:Light Gradient Boosting Machine Imported successfully
+2024-06-19 09:21:33,670:INFO:Cross validation set to False
+2024-06-19 09:21:33,670:INFO:Fitting Model
+2024-06-19 09:21:35,036:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.016447 seconds.
+2024-06-19 09:21:35,037:INFO:You can set `force_col_wise=true` to remove the overhead.
+2024-06-19 09:21:35,038:INFO:[LightGBM] [Info] Total Bins 2125
+2024-06-19 09:21:35,039:INFO:[LightGBM] [Info] Number of data points in the train set: 142800, number of used features: 24
+2024-06-19 09:21:35,042:INFO:[LightGBM] [Info] Start training from score 2456.087798
+2024-06-19 09:21:36,001:INFO:LGBMRegressor(n_jobs=-1, random_state=1234)
+2024-06-19 09:21:36,002:INFO:create_model() successfully completed......................................
+2024-06-19 09:21:36,176:INFO:Creating Dashboard logs
+2024-06-19 09:21:36,181:INFO:Model: Light Gradient Boosting Machine
+2024-06-19 09:21:36,246:INFO:Logged params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': None, 'random_state': 1234, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 1.0, 'subsample_for_bin': 200000, 'subsample_freq': 0}
+2024-06-19 09:21:36,435:INFO:Initializing predict_model()
+2024-06-19 09:21:36,435:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D52A08B410>, estimator=LGBMRegressor(n_jobs=-1, random_state=1234), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001D52ABC6FC0>)
+2024-06-19 09:21:36,435:INFO:Checking exceptions
+2024-06-19 09:21:36,435:INFO:Preloading libraries
+2024-06-19 09:21:37,664:INFO:Creating Dashboard logs
+2024-06-19 09:21:37,668:INFO:Model: K Neighbors Regressor
+2024-06-19 09:21:37,737:INFO:Logged params: {'algorithm': 'auto', 'leaf_size': 30, 'metric': 'minkowski', 'metric_params': None, 'n_jobs': -1, 'n_neighbors': 5, 'p': 2, 'weights': 'uniform'}
+2024-06-19 09:21:38,124:INFO:Creating Dashboard logs
+2024-06-19 09:21:38,129:INFO:Model: Gradient Boosting Regressor
+2024-06-19 09:21:38,182:INFO:Logged params: {'alpha': 0.9, 'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 'loss': 'squared_error', 'max_depth': 3, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_iter_no_change': None, 'random_state': 1234, 'subsample': 1.0, 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}
+2024-06-19 09:21:38,590:INFO:Creating Dashboard logs
+2024-06-19 09:21:38,594:INFO:Model: Linear Regression
+2024-06-19 09:21:38,656:INFO:Logged params: {'copy_X': True, 'fit_intercept': True, 'n_jobs': -1, 'positive': False}
+2024-06-19 09:21:39,070:INFO:Creating Dashboard logs
+2024-06-19 09:21:39,074:INFO:Model: Ridge Regression
+2024-06-19 09:21:39,136:INFO:Logged params: {'alpha': 1.0, 'copy_X': True, 'fit_intercept': True, 'max_iter': None, 'positive': False, 'random_state': 1234, 'solver': 'auto', 'tol': 0.0001}
+2024-06-19 09:21:39,492:INFO:Creating Dashboard logs
+2024-06-19 09:21:39,498:INFO:Model: Bayesian Ridge
+2024-06-19 09:21:39,564:INFO:Logged params: {'alpha_1': 1e-06, 'alpha_2': 1e-06, 'alpha_init': None, 'compute_score': False, 'copy_X': True, 'fit_intercept': True, 'lambda_1': 1e-06, 'lambda_2': 1e-06, 'lambda_init': None, 'max_iter': None, 'n_iter': 'deprecated', 'tol': 0.001, 'verbose': False}
+2024-06-19 09:21:39,899:INFO:Creating Dashboard logs
+2024-06-19 09:21:39,903:INFO:Model: Lasso Regression
+2024-06-19 09:21:39,957:INFO:Logged params: {'alpha': 1.0, 'copy_X': True, 'fit_intercept': True, 'max_iter': 1000, 'positive': False, 'precompute': False, 'random_state': 1234, 'selection': 'cyclic', 'tol': 0.0001, 'warm_start': False}
+2024-06-19 09:21:40,278:INFO:Creating Dashboard logs
+2024-06-19 09:21:40,282:INFO:Model: Lasso Least Angle Regression
+2024-06-19 09:21:40,344:INFO:Logged params: {'alpha': 1.0, 'copy_X': True, 'eps': 2.220446049250313e-16, 'fit_intercept': True, 'fit_path': True, 'jitter': None, 'max_iter': 500, 'positive': False, 'precompute': 'auto', 'random_state': 1234, 'verbose': False}
+2024-06-19 09:21:40,754:INFO:Creating Dashboard logs
+2024-06-19 09:21:40,759:INFO:Model: Elastic Net
+2024-06-19 09:21:40,822:INFO:Logged params: {'alpha': 1.0, 'copy_X': True, 'fit_intercept': True, 'l1_ratio': 0.5, 'max_iter': 1000, 'positive': False, 'precompute': False, 'random_state': 1234, 'selection': 'cyclic', 'tol': 0.0001, 'warm_start': False}
+2024-06-19 09:21:41,189:INFO:Creating Dashboard logs
+2024-06-19 09:21:41,195:INFO:Model: Huber Regressor
+2024-06-19 09:21:41,266:INFO:Logged params: {'alpha': 0.0001, 'epsilon': 1.35, 'fit_intercept': True, 'max_iter': 100, 'tol': 1e-05, 'warm_start': False}
+2024-06-19 09:21:41,650:INFO:Creating Dashboard logs
+2024-06-19 09:21:41,655:INFO:Model: AdaBoost Regressor
+2024-06-19 09:21:41,724:INFO:Logged params: {'estimator': None, 'learning_rate': 1.0, 'loss': 'linear', 'n_estimators': 50, 'random_state': 1234}
+2024-06-19 09:21:42,088:INFO:Creating Dashboard logs
+2024-06-19 09:21:42,092:INFO:Model: Orthogonal Matching Pursuit
+2024-06-19 09:21:42,165:INFO:Logged params: {'fit_intercept': True, 'n_nonzero_coefs': None, 'precompute': 'auto', 'tol': None}
+2024-06-19 09:21:42,518:INFO:Creating Dashboard logs
+2024-06-19 09:21:42,522:INFO:Model: Dummy Regressor
+2024-06-19 09:21:42,587:INFO:Logged params: {'constant': None, 'quantile': None, 'strategy': 'mean'}
+2024-06-19 09:21:42,936:INFO:Creating Dashboard logs
+2024-06-19 09:21:42,940:INFO:Model: Passive Aggressive Regressor
+2024-06-19 09:21:42,995:INFO:Logged params: {'C': 1.0, 'average': False, 'early_stopping': False, 'epsilon': 0.1, 'fit_intercept': True, 'loss': 'epsilon_insensitive', 'max_iter': 1000, 'n_iter_no_change': 5, 'random_state': 1234, 'shuffle': True, 'tol': 0.001, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}
+2024-06-19 09:21:43,362:INFO:Creating Dashboard logs
+2024-06-19 09:21:43,366:INFO:Model: Least Angle Regression
+2024-06-19 09:21:43,428:INFO:Logged params: {'copy_X': True, 'eps': 2.220446049250313e-16, 'fit_intercept': True, 'fit_path': True, 'jitter': None, 'n_nonzero_coefs': 500, 'precompute': 'auto', 'random_state': 1234, 'verbose': False}
+2024-06-19 09:21:43,797:INFO:_master_model_container: 18
+2024-06-19 09:21:43,798:INFO:_display_container: 2
+2024-06-19 09:21:43,799:INFO:[ExtraTreesRegressor(n_jobs=-1, random_state=1234), RandomForestRegressor(n_jobs=-1, random_state=1234), DecisionTreeRegressor(random_state=1234), LGBMRegressor(n_jobs=-1, random_state=1234)]
+2024-06-19 09:21:43,799:INFO:compare_models() successfully completed......................................
